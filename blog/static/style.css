@@ -32,6 +32,7 @@ body {
   --clr-fg: #555;
   --clr-fg-alt: #444;
   --clr-primary: #2978b5;
+  --clr-secondary : #fb7e14;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -41,6 +42,7 @@ body {
   --clr-fg: #bdbddd;
   --clr-fg-alt: #cdcdff;
   --clr-primary: #90a0d9;
+  --clr-secondary : #fb7e14;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -119,7 +121,7 @@ button {
   height: 0.2em;
   position: absolute;
   bottom: 0;
-  background-color: var(--clr-primary);
+  background-color: var(--clr-secondary);
   transition: width 0.2s ease-in;
 }
 
@@ -258,7 +260,9 @@ main {
 .about__name {
   color: var(--clr-primary);
 }
-
+.about__name:hover{
+  color: var(--clr-secondary);
+}
 .about__role {
   margin-top: 1.2em;
 }
@@ -299,6 +303,7 @@ main {
 
 .project:hover {
   transform: translateY(-7px);
+  background-color: var(--clr-secondary);
 }
 
 .project__description {
