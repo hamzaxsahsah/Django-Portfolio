@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+		<button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+	 <main>
+	 	<div class="about center">
+	 		<h1>{{project.name}}.</span></h1>
+	 		<p class="about__desc">
+          	{{project.description}}
+        </p>
+
+	 	</div>
+	 	<div class="images-holder">
+	 		{% for image in project.images.all%}
+	 		<div >
+	 			<img  class="image-item" src="{{image.picture}}"/>
+	 		</div>
+	 		{% endfor %}
+	 	</div>
+	 	<article >
+	 		<p class="atricale">
+	 		{{project.articale}}
+	 	</p>
+	 	</article>
+	 </main>
+
+{% endblock content %}

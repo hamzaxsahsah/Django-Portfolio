@@ -261,7 +261,7 @@ main {
   color: var(--clr-primary);
 }
 .about__name:hover{
-  color: var(--clr-secondary);
+  color: var(--clr-primary);
 }
 .about__role {
   margin-top: 1.2em;
@@ -415,4 +415,30 @@ main {
   .scroll-container {
     display: none;
   }
+}
+
+.images-holder{
+  margin-top: 3em;
+    justify-self: center;
+    display : flex ;
+    flex-direction : row;
+    flex-wrap : wrap ;
+    width :70em;
+    x-overflow : hide ;
+    justify-content: space-around;
+}
+
+.image-item{
+  margin-top: 1em ;
+  width: 25em;
+  height: 15em;
+  border-style: dashed;
+  border-color: black;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+atricale{
+  div {
+  text-align: justify;
+  text-justify: inter-word;
+}
 }
