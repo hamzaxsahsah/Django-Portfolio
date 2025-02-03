@@ -1,20 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-		<button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
-
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </header>
-	 <main>
+		
 	 	<div class="about center">
 	 		<h1>{{project.name}}.</span></h1>
 	 		<p class="about__desc">
@@ -29,11 +16,14 @@
 	 		</div>
 	 		{% endfor %}
 	 	</div>
+	 		{% if project.live_example %}
+	 			 <iframe width="100%" height="100%" frameborder="0" src="{{project.live_example}}"></iframe> 
+	 		{% endif%}
+	 		
 	 	<article >
 	 		<p class="atricale">
 	 		{{project.articale}}
 	 	</p>
 	 	</article>
-	 </main>
 
 {% endblock content %}

@@ -31,8 +31,8 @@ body {
   --clr-bg-alt: #fff;
   --clr-fg: #555;
   --clr-fg-alt: #444;
-  --clr-primary: #2978b5;
-  --clr-secondary : #fb7e14;
+  --clr-primary: #fb7e14;
+  --clr-secondary : #fac08e;
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -42,7 +42,7 @@ body {
   --clr-fg: #bdbddd;
   --clr-fg-alt: #cdcdff;
   --clr-primary: #90a0d9;
-  --clr-secondary : #fb7e14;
+  --clr-secondary : #85caff;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -303,7 +303,6 @@ main {
 
 .project:hover {
   transform: translateY(-7px);
-  background-color: var(--clr-secondary);
 }
 
 .project__description {
@@ -340,6 +339,11 @@ main {
 .skills__list-item {
   margin: 0.5em;
 }
+.projects-main{
+  margin-top: 50em;
+  margin-right:20em;
+  width: 80%;
+}
 
 .contact {
   flex-direction: column;
@@ -356,7 +360,11 @@ main {
   font-weight: 700;
   color: var(--clr-fg);
 }
-
+.projects-div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .scroll-top {
   display: none;
   position: fixed;
@@ -436,9 +444,14 @@ main {
   border-color: black;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-atricale{
+.atricale{
   div {
   text-align: justify;
   text-justify: inter-word;
 }
+
+}
+.project-projects{
+  width: 120%;
+  margin: 2em;
 }

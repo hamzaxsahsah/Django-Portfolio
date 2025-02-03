@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- <main class="projects-main"> -->
+      <!-- About -->
+     <div class="projects-div">
+		{% for project in projects %} 
+    <div class="project project-projects">
+
+            <h3>{{project.name}}</h3>
+            <p class="project__description">
+              {{project.description}}
+            </p>
+            <ul class="project__stack">
+              {% for tech in project.technologies.all %} 
+              <li class="project__stack-item">{{tech.name}}</li>
+             
+              {% endfor %} 
+            </ul>
+
+            {% if  project.source %} 
+            <a
+              href="{{project.source}}"
+              aria-label="source code"
+              class="link link--icon"
+            >
+
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            {% endif %} 
+            {% if  project.live_example %} 
+            <a
+              href="{{project.live_example}}"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+            {% endif %} 
+            <h4 class="section__title"><a href={% url 'project' project.id %}>Read More</a></h4>
+          </div>
+        {% endfor %} 
+       </div>
+        <!-- </main> -->
+
+{% endblock content %}
