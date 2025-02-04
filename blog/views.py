@@ -22,4 +22,6 @@ def projects_page(request):
 
 def blogs(request):
 	blogs = Blog.objects.all()
-	return render(request,'blog.html',{'blogs':blogs})
+	Posts = Post.objects.all()
+	lastest_post = Post.objects.all().order_by('-id')[:1]
+	return render(request,'blog.html',{'blogs':blogs,'Posts':Posts,'lastest_post':lastest_post})

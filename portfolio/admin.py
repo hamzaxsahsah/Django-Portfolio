@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Education,Technology,Prize,Project , Persone,DImage
+from .models import Education, Technology, Prize, Project, Persone, DImage
+
 # Register your models here.
 
 

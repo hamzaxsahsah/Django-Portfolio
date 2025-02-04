@@ -1,6 +1,62 @@
 {% extends "base.html" %}
-
 {% block content %}
-
-
+<main>
+    <!-- About -->
+    <div class="about center">
+        <h2 class="about__role">Latest Article</h2>
+        <div class="container">
+            <div class="card card-wide">
+                <div class="card-header">
+                    {% with lastest_post.images.all|first as image %}
+                    <img src="{{image.picture}}" alt="{{image.name}}" />
+                    {% endwith%}
+                </div>
+                <div class="card-body">
+                    {% for tag in lastest_post.tag.all %}
+                    <span class="tag" style="background-color: {{tag.hex_color}};">{{tag.name}}</span>
+                    {% endfor%}
+                    <h4>
+                        {{lastest_post.title}}
+                    </h4>
+                    <p>
+                        {{lastest_post.content}}
+                    </p>
+                    <div class="user">
+                        <div class="user-info">
+                            <small>{{lastest_post.time_from_creation}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="about__role">See More</h2>
+        <div class="container">
+            {% for post in Posts%}
+            <div class="card">
+                <div class="card-header">
+                    {% with post.images.all|first as image %}
+                    <img src="{{image.picture}}" alt="{{image.name}}" />
+                    {% endwith%}
+                </div>
+                <div class="card-body">
+                    {% for tag in post.tags.all %}
+                    <span class="tag" style="background-color: {{tag.hex_color}};">{{tag.name}}</span>
+                    {% endfor%}
+                    <h4>
+                        {{post.title}}
+                    </h4>
+                    <p>
+                        {{post.content}}
+                    </p>
+                    <div class="user">
+                        <div class="user-info">
+                            <small>{{post.time_from_creation}}</small>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+             {% endfor %}
+            </div>
+</main>
 {% endblock content %}
