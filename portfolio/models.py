@@ -62,7 +62,7 @@ class Persone(models.Model):
     name = models.TextField()
     role = models.TextField()
     description = models.TextField()
-    resume = models.TextField()
+    resume = models.FileField()
     contact = models.TextField()
     email = models.TextField()
     github = models.TextField()

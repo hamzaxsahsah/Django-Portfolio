@@ -545,7 +545,11 @@ main {
 .user-info small {
     color: #545d7a;
 }
-
+.user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .card-wide {
     width: 100%;
 }

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="about center">
+    <h1>{{post.title}}.</h1>
+    {% for tag in post.tags.all %}
+    <span class="tag" style="background-color: {{tag.hex_color}};">{{tag.name}}</span>
+    {% endfor%}
+    <div class="images-holder">
+        {% for image in post.images.all%}
+        <div>
+            <img class="image-item" src="{{image.picture}}" />
+        </div>
+        {% endfor %}
+    </div>
+    <article >
+	 		<p class="atricale">
+	 		{{post.content}}
+	 	</p>
+	 	</article>
+</div>
+{% endblock content %}

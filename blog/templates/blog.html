@@ -5,7 +5,10 @@
     <div class="about center">
         <h2 class="about__role">Latest Article</h2>
         <div class="container">
+            {% with Posts|first as lastest_post %}
+             
             <div class="card card-wide">
+                <a href="{% url 'post' lastest_post.id %}">
                 <div class="card-header">
                     {% with lastest_post.images.all|first as image %}
                     <img src="{{image.picture}}" alt="{{image.name}}" />
@@ -27,12 +30,17 @@
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
+        
+            {% endwith %}
         </div>
         <h2 class="about__role">See More</h2>
         <div class="container">
             {% for post in Posts%}
+            <a href="{% url 'post' post.id %}">
             <div class="card">
+                
                 <div class="card-header">
                     {% with post.images.all|first as image %}
                     <img src="{{image.picture}}" alt="{{image.name}}" />
@@ -56,6 +64,7 @@
                 </div>
                
             </div>
+             </a>
              {% endfor %}
             </div>
 </main>
