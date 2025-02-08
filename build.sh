@@ -10,3 +10,7 @@ python manage.py collectstatic --no-input
 
 # Apply any outstanding database migrations
 python manage.py migrate
+export DJANGO_SUPERUSER_EMAIL=hamza@admin.com
+export DJANGO_SUPERUSER_PASSWORD=Grandfucker1945
+python manage.py createsuperuser --no-input
+Superuser created successfully.
