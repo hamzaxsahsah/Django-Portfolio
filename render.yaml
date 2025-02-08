@@ -1,8 +1,8 @@
 databases:
   - name: mysitedb
     plan: free
-    databaseName: Hajar
-    user: Porto
+    databaseName: porto_db
+    user: porto_user
 
 services:
   - type: web
