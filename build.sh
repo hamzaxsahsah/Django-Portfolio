@@ -16,5 +16,5 @@ export DJANGO_SUPERUSER_EMAIL="hamza@admin.com"
 export DJANGO_SUPERUSER_USERNAME="admin"
 export DJANGO_SUPERUSER_PASSWORD="Grandfucker1945"
 # Create the superuser
-python manage.py createsuperuser --no-input --email "$DJANGO_SUPERUSER_EMAIL" --username "$DJANGO_SUPERUSER_USERNAME"  || echo "Superuser already exists."
+python manage.py createsuperuser2  --password "$DJANGO_SUPERUSER_PASSWORD" --username "$DJANGO_SUPERUSER_USERNAME"  || echo "Superuser already exists."
 
