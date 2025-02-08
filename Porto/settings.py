@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-vqd01+vdgc(@**p(qmc5+**fvsrz6vn4^q)%+2db##%!=mnjqr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["porto-frfs.onrender.com"]
+ALLOWED_HOSTS = ["porto-96j3.onrender.com"]
 
 
 # Application definition
