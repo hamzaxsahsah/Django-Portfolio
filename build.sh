@@ -2,15 +2,18 @@
 # Exit on error
 set -o errexit
 
-# Modify this line as needed for your package manager (pip, poetry, etc.)
+# Install dependencies
 pip install -r requirements.txt
 
-# Convert static asset files
+# Collect static files
 python manage.py collectstatic --no-input
 
-# Apply any outstanding database migrations
+# Apply database migrations
 python manage.py migrate
-export DJANGO_SUPERUSER_EMAIL=hamza@admin.com
-export DJANGO_SUPERUSER_PASSWORD=Grandfucker1945
-python manage.py createsuperuser --no-input
-Superuser created successfully.
+
+# Set superuser credentials securely
+export DJANGO_SUPERUSER_EMAIL="hamza@admin.com"
+export DJANGO_SUPERUSER_USERNAME="Grandfucker1945"
+
+# Create the superuser
+python manage.py createsuperuser --no-input --email "$DJANGO_SUPERUSER_EMAIL" --username "$DJANGO_SUPERUSER_USERNAME" || echo "Superuser already exists."
